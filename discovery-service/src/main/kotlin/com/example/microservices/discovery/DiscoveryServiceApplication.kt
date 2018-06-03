@@ -22,9 +22,7 @@ internal class DiscoveryServiceController(val discoveryClient: DiscoveryClient) 
 
     @GetMapping("/service-instances")
     fun serviceInstances(): List<ServiceInstance> =
-        discoveryClient.services.flatMap {
-            discoveryClient.getInstances(it)
-        }
+        discoveryClient.services.flatMap { discoveryClient.getInstances(it) }
 
     @GetMapping("/service-instances/{appName}")
     fun serviceInstanceByAppName(@PathVariable appName: String): List<ServiceInstance> =

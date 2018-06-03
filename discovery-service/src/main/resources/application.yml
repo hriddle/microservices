@@ -3,9 +3,6 @@ server:
 eureka:
   client:
     register-with-eureka: false
-#    fetch-registry: false
   instance:
     prefer-ip-address: true
-logging:
-  level:
-    com.netflix.eureka: OFF
+    lease-renewal-interval-in-seconds: 10
