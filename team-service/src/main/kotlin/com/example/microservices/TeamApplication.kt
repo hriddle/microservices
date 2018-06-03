@@ -17,12 +17,3 @@ class TeamApplication
 fun main(args: Array<String>) {
     runApplication<TeamApplication>(*args)
 }
-
-@Configuration
-internal class ApplicationConfiguration {
-    @Bean
-    @LoadBalanced
-    fun restTemplate(): RestTemplate {
-        return RestTemplate()
-    }
-}

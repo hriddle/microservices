@@ -1,19 +1,16 @@
 package com.example.microservices.client
 
 import com.example.microservices.rest.Product
-import org.springframework.core.ParameterizedTypeReference
-import org.springframework.http.HttpMethod.GET
-import org.springframework.stereotype.Service
+import org.springframework.cloud.openfeign.FeignClient
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.client.RestTemplate
 
-@Service
-class ProductService(private val restTemplate: RestTemplate) {
+@FeignClient("product-service")
+interface ProductService {
 
-    fun getAllProducts(): List<Product> = restTemplate.exchange(
-        "http://product-service/products/", GET, null, object : ParameterizedTypeReference<List<Product>>() {}
-    ).body ?: emptyList()
+    @GetMapping("/products")
+    fun getAllProducts(): List<Product>
 
-    fun getProductById(@PathVariable id: Long): Product =
-        restTemplate.getForObject("http://product-service/products/$id", Product::class.java) ?: Product()
+    @GetMapping("/products/{id}")
+    fun getProductById(@PathVariable id: Long): Product
 }
