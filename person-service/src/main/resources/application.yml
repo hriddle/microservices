@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: person-service
+  zipkin:
+    locator:
+      discovery:
+        enabled: true
+  sleuth:
+    sampler:
+      probability: 1.0
+server:
+  port: 8081

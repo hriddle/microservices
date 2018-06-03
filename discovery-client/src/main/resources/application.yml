@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: discovery-client
+eureka:
+  client:
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
