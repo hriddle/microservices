@@ -19,7 +19,7 @@ test {
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.RC1'
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.RC2'
     }
 }
 
@@ -28,6 +28,7 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
 
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client'
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin'
 
     compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.9.+'
