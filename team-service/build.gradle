@@ -19,7 +19,7 @@ test {
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.RC2'
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springReleaseTrainVersion"
     }
 }
 
@@ -31,8 +31,7 @@ dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin'
 
-    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: '2.9.+'
+    compile group: 'com.fasterxml.jackson.module', name: 'jackson-module-kotlin', version: jacksonKotlinVersion
 
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
-    testCompile 'io.kotlintest:kotlintest-runner-junit5:3.1.0'
 }
