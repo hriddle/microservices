@@ -1,0 +1,9 @@
+= Team Service
+
+This is the team-service. It calls person-service and product-service.
+
+.request
+include::{snippets}/teams/http-request.adoc[]
+
+.response
+include::{snippets}/teams/http-response.adoc[]
