@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Developer Resources</title>
+</head>
+<body>
+<div th:each="app : ${docLinks}">
+    <h3 th:text="${app.displayName}"></h3>
+    <p th:if="${app.documentationUrl != null}"><a th:href="${app.documentationUrl}">Documentation</a></p>
+    <p th:if="${app.documentationUrl == null}">Documentation Unavailable</p>
+    <p th:if="${app.swaggerUrl != null}"><a th:href="${app.swaggerUrl}">Swagger</a></p>
+    <p th:if="${app.swaggerUrl == null}">Swagger Unavailable</p>
+</div>
+</body>
+</html>

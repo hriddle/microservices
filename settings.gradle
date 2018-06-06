@@ -3,4 +3,5 @@ include 'person-service'
 include 'product-service'
 include 'discovery-service'
 include 'team-service'
+include 'documentation-app'
 
