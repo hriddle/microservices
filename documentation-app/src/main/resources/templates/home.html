@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Developer Resources</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<div th:each="app : ${docLinks}">
-    <h3 th:text="${app.displayName}"></h3>
-    <p th:if="${app.documentationUrl != null}"><a th:href="${app.documentationUrl}">Documentation</a></p>
-    <p th:if="${app.documentationUrl == null}">Documentation Unavailable</p>
-    <p th:if="${app.swaggerUrl != null}"><a th:href="${app.swaggerUrl}">Swagger</a></p>
-    <p th:if="${app.swaggerUrl == null}">Swagger Unavailable</p>
-</div>
+<section id="api-section">
+    <header id="api-header">
+        <div class="content">
+            <h2>Digital APIs</h2>
+            <p>Everything you need to know to integrate with our continuously growing catalog of enterprise APIs</p>
+        </div>
+        <div class="section-links"><a href="#">Getting Started with REST APIs</a></div>
+    </header>
+
+    <section class="product" th:each="app : ${docLinks}">
+        <h3 th:text="${app.displayName}"></h3>
+        <div class="product-links">
+            <div th:if="${app.documentationUrl != null}" class="link"><a th:href="${app.documentationUrl}">Documentation</a></div>
+            <div th:if="${app.documentationUrl == null}" class="link unavailable">Docs Unavailable</div>
+            <div th:if="${app.swaggerUrl != null}" class="link"><a th:href="${app.swaggerUrl}">Swagger</a></div>
+            <div th:if="${app.swaggerUrl == null}" class="link unavailable">Swagger Unavailable</div>
+        </div>
+    </section>
+</section>
+
 </body>
 </html>

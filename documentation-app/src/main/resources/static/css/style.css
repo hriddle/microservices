@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FAFAFA;
+    font-family: Barlow, Roboto, Helvetica, sans-serif;
+    color: black;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+section#api-section {
+    width: 100%
+}
+
+header#api-header {
+    background-color: black;
+    color: white;
+    /* border-left: 20px solid #575757; */
+    display: table;
+    width: 100%;
+}
+
+#api-header .section-links {
+    width: 256px;
+    background-color: #575757;
+    font-weight: 500;
+    display: table-cell;
+}
+
+#api-header .content {
+    display: table-cell;
+    padding: 5px 30px 15px 30px;
+}
+
+#api-header .content h2 {
+    font-weight: bold;
+    font-size: 72px;
+}
+
+#api-header .content p {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#api-header .section-links a {
+    font-family: 'Barlow Condensed', Roboto, Helvetica, sans-serif;
+    font-size: 36px;
+    color: white;
+    line-height: 43px;
+    padding: 40px 16px;
+    text-align: center;
+    display: block;
+}
+
+.product {
+    background-color: #E4E4E4;
+    margin: 16px 0;
+    height: 128px;
+    display: flex;
+}
+
+.product h3 {
+    display: inline-block;
+    font-size: 72px;
+    line-height: 128px;
+    padding: 0 30px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.product .product-links {
+    width: 256px;
+}
+
+.product:nth-child(3n+1) .product-links {
+    background-color: #8CC545;
+}
+
+.product:nth-child(3n+2) .product-links {
+    background-color: #0F6DBE;
+}
+
+.product:nth-child(3n) .product-links {
+    background-color: #1FBFC9;
+}
+
+.product .product-links div.link {
+    display: block;
+    height: 50%;
+    color: white;
+    font-size: 36px;
+    line-height: 62px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', Roboto, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.product .product-links div.link:first-child {
+    border-bottom: 2px solid #E4E4E4;
+}
+
+.product .product-links div.link:nth-child(2) {
+    border-top: 2px solid #E4E4E4;
+}
+
+.product .product-links div.link.unavailable {
+    font-size: 24px;
+}

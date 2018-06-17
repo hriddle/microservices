@@ -27,5 +27,7 @@ dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin'
 
+    runtime group: 'org.springframework.boot', name: 'spring-boot-devtools'
+
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
