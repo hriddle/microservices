@@ -10,9 +10,5 @@ spring:
       probability: 1.0
 server:
   port: 8083
-eureka:
-  instance:
-    metadata-map:
-      appDisplayName: Teams API
-      swaggerPath: swagger-ui.html
-      documentationPath: docs/index.html
+
+appDisplayName: Team API

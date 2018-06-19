@@ -23,6 +23,8 @@ dependencyManagement {
 }
 
 dependencies {
+    compile project(":make-discoverable")
+
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
 
