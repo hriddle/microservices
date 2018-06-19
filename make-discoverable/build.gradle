@@ -1,0 +1,16 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'org.jetbrains.kotlin', name: 'kotlin-allopen', version: kotlinVersion
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'kotlin-spring'
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: '5.0.7.RELEASE'
+}
